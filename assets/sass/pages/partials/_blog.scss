@@ -1,0 +1,47 @@
+.blog {
+  background: var(--accent-block-300) !important;
+  padding-top: 32px;
+
+  &__text > * {
+    text-align: left;
+  }
+
+  &__text {
+    order: 2;
+
+    h1 {
+      max-width: 16ch;
+    }
+
+    p {
+      max-width: 42ch;
+    }
+  }
+
+  &__img {
+    img {
+      width: 85%;
+    }
+    text-align: right;
+    order: 5;
+    width: 50%;
+  }
+
+  @media (max-width: 788px) {
+    flex-direction: column;
+
+    &__text {
+      order: 1;
+    }
+
+    h1 {
+      max-width: 16ch;
+    }
+
+    &__img {
+      text-align: center;
+      order: 0;
+      min-width: 90%;
+    }
+  }
+}

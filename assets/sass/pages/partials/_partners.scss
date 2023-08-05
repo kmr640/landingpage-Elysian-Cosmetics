@@ -1,0 +1,26 @@
+.partners {
+  &__carousel {
+    overflow: hidden;
+    white-space: nowrap;
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__image {
+      opacity: 0.3;
+      padding: 0 18px;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 788px) {
+    &__carousel {
+      &__image {
+        max-width: 21%;
+      }
+    }
+  }
+}

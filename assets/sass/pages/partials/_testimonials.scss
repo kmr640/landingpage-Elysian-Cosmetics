@@ -1,0 +1,46 @@
+.testimonials {
+    width: 100%;
+    margin: 0 auto;
+  
+    &__carousel {
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+  
+      &__chavez,
+      &__machron {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  
+    &__slider {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300%;
+  
+      transition: all 0.3s;
+    }
+  
+    &__controls {
+      .arrow {
+        position: absolute;
+        top: 50%;
+        width: 46px;
+        cursor: pointer;
+        transform: translateY(-50%);
+  
+        &.left {
+          left: 10px;
+        }
+  
+        &.right {
+          right: 10px;
+        }
+      }
+    }
+  }
+  

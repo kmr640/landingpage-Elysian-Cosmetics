@@ -1,0 +1,76 @@
+.company, .community, .legal, .social {
+    ul {
+      li {
+        padding: 4px 0;
+      }
+    }
+  }
+  
+  .company, .community, .legal, .social {
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .brand {
+    text-align: left;
+    position: relative;
+    justify-self: center;
+    align-self: start;
+    bottom: .5rem;
+    left: 1.5rem;
+  }
+  
+  .footer__social__icons {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+  }
+  
+  .footer__social__icons__item {
+    padding-right: 8px;
+  }
+  
+  .grid-footer {
+    padding: 42px;
+  }
+  
+  @media (max-width: 788px) {
+    .footer__social__icons {
+      justify-content: center;
+      padding-top: 0;
+    }
+  
+    .company, .community, .legal, .social {
+      text-align: center;
+    }
+  
+    .grid-footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "brand"
+        "company"
+        "community"
+        "legal"
+        "social";
+    }
+  
+    .brand {
+      text-align: center;
+      justify-self: center;
+      align-self: center;
+      bottom: 0;
+      left: 0;
+  
+      p {
+        max-width: 24ch;
+      }
+    }
+  }
+  
+  .footer__copyright {
+    text-align: center;
+  }
+  

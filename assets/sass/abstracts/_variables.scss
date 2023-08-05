@@ -1,0 +1,177 @@
+@use '../utilities/spacing' as *;
+
+// TODO: translate into css vars
+
+/*##################fonts##################*/
+$font-family-primary: 'Playfair Display', serif;
+$font-family-secondary: 'Poppins', sans-serif;
+
+//common
+$font-brand: --font-150;
+$font-p: --font-100;
+$font-header: --font-300;
+$font-btn: --font-100;
+
+//nav
+$font-nav-text: --font-100;
+
+//hero
+$font-hero-h1: --font-600;
+
+//ingredients
+$ingredients-h2-product: --font-300;
+
+//about
+$about-p: --font-125;
+
+//products
+$products-category: --font-125;
+
+//testimonial
+$testimonial-p: --font-250;
+
+//cta
+$cta-h2: --font-225;
+$cta-btn: --font-175;
+
+//footer
+$footer-p: --font-90;
+$copyright: --font-80;
+
+
+//colors
+$bg-color: --bg-color;
+$primary-text: --primary-text;
+$primary-btn: --primary-btn;
+$accent-block-100: --accent-block-100;
+$accent-block-200: --accent-block-200;
+$accent-block-300: --accent-block-300;
+$accent-text-100: --accent-text-100;
+$accent-text-200: --accent-text-200;
+
+//other
+$accent-color-300: --accent-color-300;
+$accent-color-400: --accent-color-400;
+$accent-color-500: --accent-color-500;
+$accent-color-600: --accent-color-600;
+$accent-color-700: --accent-color-700;
+$product-text: --product-text;
+$carousel-btn: --carousel-btn;
+$bg-color-dark: --bg-color-dark;
+$primary-text-dark: --primary-text-dark;
+$primary-btn-dark: --primary-btn-dark;
+$accent-block-100-dark: --accent-block-100-dark;
+$accent-text-100-dark: --accent-text-100-dark;
+$accent-text-200-dark: --accent-text-200-dark;
+
+//
+$product-text-dark: --product-text-dark;
+$carousel-btn-dark: --carousel-btn-dark;
+
+//other alt
+$accent-color-300-dark: --accent-color-300-dark;
+$accent-color-400-dark: --accent-color-400-dark;
+$accent-color-500-dark: --accent-color-500-dark;
+$accent-color-600-dark: --accent-color-600-dark;
+$accent-color-700-dark: --accent-color-700-dark;
+
+
+// $font-80: --font-80;
+// $font-90: --font-90;
+// $font-100: --font-100;
+// $font-125: --font-125;
+// $font-150: --font-150;
+// $font-175: --font-175;
+// $font-200: --font-200;
+// $font-225: --font-225;
+// $font-250: --font-250;
+// $font-300: --font-300;
+// $font-600: --font-600;
+
+
+
+//FIXME: fonts
+
+:root {
+  /* fonts */
+  // #{$font-80}: 0.875rem;
+  // #{$font-90}: 1.125rem;
+  // #{$font-100}: 1.25rem;
+  // #{$font-125}: 1.375rem;
+  // #{$font-150}: 1.5rem;
+  // #{$font-175}: 1.5625rem;
+  // #{$font-200}: 1.9rem;
+  // #{$font-225}: 2.5rem;
+  // #{$font-250}: 2.8125rem;
+  // #{$font-300}: 2.875rem; //header-text mobile
+  // #{$font-600}: 5.125rem; //header-text desktop
+  /* colors */
+  #{$bg-color}: hsl(0, 0%, 100%);
+  #{$primary-text}: hsl(228, 45.5%, 10.8%);
+  #{$primary-btn}: hsl(228, 45.5%, 10.8%);
+  #{$accent-block-100}: hsl(16.3, 94.4%, 71.8%);
+  #{$accent-block-200}: hsl(15.4, 95.3%, 58.4%);
+  #{$accent-block-300}: hsl(17.1, 100%, 97.3%);
+  #{$accent-text-100}: hsl(15.4, 95.3%, 58.4%);
+  #{$accent-text-200}: hsl(12, 100%, 98%);
+
+  /* other */
+  #{$accent-color-300}: hsla(0, 0%, 100%, 0.1);
+  #{$accent-color-400}: hsla(194, 100%, 97%, 1);
+  #{$accent-color-500}: hsla(0, 0%, 98%, 0.3);
+  #{$accent-color-600}: hsla(16, 100%, 89%, 1);
+  #{$accent-color-700}: hsla(49, 100%, 93%, 1);
+  #{$product-text}: hsl(0, 0%, 41.6%);
+  #{$carousel-btn}: hsl(22.5, 25%, 93.7%);
+
+  #{$bg-color-dark}: hsl(0, 0%, 0%);
+  #{$primary-text-dark}: hsl(228, 45.5%, 10.8%);
+  #{$primary-btn-dark}: hsl(228, 45.5%, 10.8%);
+  #{$accent-block-100-dark}: hsl(16.3, 94.4%, 71.8%);
+  #{$accent-text-100-dark}: hsl(15.4, 95.3%, 58.4%);
+  #{$accent-text-200-dark}: hsl(12, 100%, 98%);
+
+  /* // */
+  #{$product-text-dark}: hsl(0, 0%, 41.6%);
+  #{$carousel-btn-dark}: hsl(22.5, 25%, 93.7%);
+
+  /* other alt */
+  #{$accent-color-300-dark}: hsla(0, 0%, 100%, 0.1);
+  #{$accent-color-400-dark}: hsla(194, 100%, 97%, 1);
+  #{$accent-color-500-dark}: hsla(0, 0%, 98%, 0.3);
+  #{$accent-color-600-dark}: hsla(16, 100%, 89%, 1);
+  #{$accent-color-700-dark}: hsla(49, 100%, 93%, 1);
+
+  /* spacing */
+  @each $value in $margin-values {
+    $i: index($margin-values, $value);
+    --mt-#{$i}:  #{$value}rem;
+    --mb-#{$i}:  #{$value}rem;
+    --ml-#{$i}:  #{$value}rem;
+    --mr-#{$i}:  #{$value}rem;
+  }
+
+  @each $value in $padding-values {
+  $i: index($padding-values, $value);
+  --pt-#{$i}:  #{$value}rem;
+  --pb-#{$i}:  #{$value}rem;
+  --pl-#{$i}:  #{$value}rem;
+  --pr-#{$i}:  #{$value}rem;
+  }
+}
+
+  /* spacing classes */
+  @each $value in $margin-values {
+  $i: index($margin-values, $value);
+  .mt-#{$i} { margin-top: var(--mt-#{$i}); }
+  .mb-#{$i} { margin-bottom: var(--mb-#{$i}); }
+  .ml-#{$i} { margin-left: var(--ml-#{$i}); }
+  .mr-#{$i} { margin-right: var(--mr-#{$i}); }
+  }
+  @each $value in $padding-values {
+  $i: index($padding-values, $value);
+  .pt-#{$i} { padding-top: var(--pt-#{$i}); }
+  .pb-#{$i} { padding-bottom: var(--pb-#{$i}); }
+  .pl-#{$i} { padding-left: var(--pl-#{$i}); }
+  .pr-#{$i} { padding-right: var(--pr-#{$i}); }
+  }

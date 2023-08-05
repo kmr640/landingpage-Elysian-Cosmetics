@@ -1,0 +1,14 @@
+//base
+@use 'base';
+
+// main abstracts ( globals, vars, animations)
+@use 'abstracts';
+
+//utilities (margin, padding etc)
+@use 'utilities';
+
+//pages 
+@use 'pages';
+
+//partials
+@use 'pages/partials';

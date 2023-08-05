@@ -1,0 +1,167 @@
+@use 'variables' as *;
+
+//accent block
+.accent-block-100 {
+  background-color: var(--accent-block-100);
+}
+
+//font classes
+.accent__text {
+  font-family: $font-family-secondary;
+  font-size: clamp(0.75rem, 0.521rem + 1.224vw, 1.1rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-text-100);
+  line-height: 229%;
+
+  &__200 {
+    font-family: $font-family-primary;
+    font-size: clamp(1.625rem, 1.182rem + 1.647vw, 2.5rem);
+    font-weight: 600;
+    text-align: center;
+    color: var(--accent-text-100);
+  }
+
+  &__300 {
+    @extend .accent__text__200;
+    font-family: $font-family-secondary;
+    font-size: clamp(0.8rem, 1.182rem + 1.647vw, 1rem);
+    font-weight: 500;
+  }
+}
+
+.header {
+  font-family: $font-family-primary;
+  font-size: clamp(2.875rem, 1.917rem + 3.564vw, 5.125rem);
+  font-weight: 400;
+  color: var(--primary-text);
+  line-height: 1.11;
+  max-width: 12ch;
+
+  &__span {
+    @extend .header;
+    color: var(--accent-text-100);
+  }
+
+  &__200 {
+    font-family: $font-family-primary;
+    font-size: clamp(1.625rem, 1.182rem + 1.647vw, 2.5rem);
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-text);
+  }
+
+  &__300 {
+    @extend .header__200;
+    font-size: clamp(0.9rem, 1.182rem + 1.647vw, 1.2rem);
+  }
+
+  &__400 {
+    @extend .header__200;
+    font-family: $font-family-secondary;
+    font-size: clamp(1.4rem, 1.182rem + 1.647vw, 1.9rem);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__text__100 {
+    font-family: $font-family-secondary;
+    font-size: clamp(0.60rem, 0.421rem + 1.224vw, .9rem);
+    font-weight: 500;
+    color: var(--primary-text);
+    line-height: 2.29;
+    max-width: 54ch;
+  }
+
+  &__text__200 {
+    font-family: $font-family-secondary;
+    font-size: clamp(0.75rem, 1.182rem + 1.647vw, .9rem);
+    font-weight: 400;
+    text-align: center;
+    color: var(--product-text);
+  }
+}
+
+.footer {
+  font-family: $font-family-secondary;
+  font-size: clamp(1.1rem, 1.753rem + -0.941vw, 1.5rem);
+  font-weight: 500;
+  color: hsl(12, 100%, 98%);
+
+  &__header {
+    @extend .footer;
+    font-family: $font-family-primary;
+    font-size: clamp(1.5rem, 1.182rem + 1.647vw, 1.7rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  &__text__100 {
+    @extend .footer;
+    font-size: clamp(0.9rem, 1.182rem + 1.647vw, 1.1rem);
+    font-weight: 400;
+  }
+  &__text__200 {
+    @extend .footer;
+    font-size: clamp(0.9rem, 1.402rem + -0.753vw, 1.2rem);
+    font-weight: 300;
+  }
+
+  &__copyright {
+    @extend .footer;
+    font-size: clamp(0.6rem, 1.402rem + -0.753vw, .9rem);
+    font-weight: 300;
+  }
+}
+
+.testimonials {
+  font-family: $font-family-secondary;
+  font-size: clamp(0.9rem, 1.182rem + 1.647vw, 1.2rem);
+  font-weight: 500;
+  color: var(--primary-text);
+  text-align: center;
+
+  //other classes
+  img {
+    width: 80px;
+  }
+
+  &__text__100 {
+    @extend .testimonials;
+    font-style: italic;
+  }
+}
+
+//buttons
+.btn {
+  font-family: $font-family-secondary;
+  font-size: clamp(0.7rem, .982rem + 1.647vw, .8rem);
+  font-weight: 600;
+  background-color: var(--primary-btn);
+  color: hsl(0, 0%, 100%);
+  padding: clamp(1rem, 0.747rem + 0.941vw, 1.3rem) clamp(2.3rem, 2.373rem + 0.565vw, 3.325rem);
+  border: 0;
+
+  &__outline {
+    @extend .btn;
+    background-color: transparent;
+    color: var(--primary-text);
+    padding: clamp(1rem, 0.747rem + 0.941vw, 1.3rem) clamp(3rem, 2.973rem + 0.565vw, 3.325rem);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+  }
+
+  &__accent {
+    @extend .btn;
+    font-size: 1.25rem;
+    background-color: var(--accent-block-200);
+    padding: clamp(1.1rem, 0.747rem + 0.941vw, 1.3rem) clamp(2.1rem, 2.973rem + 0.565vw, 2.425rem);
+  }
+}
+
+@media (max-width: 788px) {
+  .btn__outline {
+    font-size: clamp(0.5rem, .982rem + 1.647vw, .60rem);
+  }
+}
+
+  

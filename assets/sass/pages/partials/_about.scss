@@ -1,0 +1,29 @@
+.about {
+  .accent__text {
+    text-align: center;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0 4rem;
+
+    p {
+      max-width: 32ch;
+    }
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 788px) {
+      flex-direction: column;
+    }
+  }
+}
+
+  
+
+
+  

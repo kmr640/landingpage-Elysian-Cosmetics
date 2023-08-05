@@ -1,0 +1,39 @@
+@use '../../abstracts/variables' as *;
+
+.ingredients {
+  &__cta {
+    text-align: center;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 0 .7rem;
+  }
+
+  a {
+    font-family: $font-family-secondary;
+    font-size: clamp(0.7rem, .982rem + 1.647vw, .9rem);
+    font-weight: 500;
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 90%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 788px) {
+  .ingredients {
+    a {
+      font-size: clamp(0.5rem, .982rem + 1.647vw, .75rem);
+    }
+  }
+}

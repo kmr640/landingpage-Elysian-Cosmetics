@@ -1,0 +1,18 @@
+.hero {
+    background: var(--accent-block-300) !important;
+    &__img {
+        order: 1;
+    }
+}
+
+@media (max-width: 788px) {
+    .hero {
+        flex-direction: column;
+        
+        &__img {
+            order: 0;
+            min-width: 50%;
+            max-width: 65%;
+        }
+    }
+}

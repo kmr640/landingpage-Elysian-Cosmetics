@@ -1,0 +1,32 @@
+.item {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #000000;
+    transition: width 0.5s ease-in-out;
+    transform-origin: right bottom;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+}
+
+.ingredients__item {
+  @extend .item;
+}
+
+.menu__item {
+  @extend .item;
+}
+
+
+

@@ -1,0 +1,84 @@
+.grid-container {
+    --max-width: 80em;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 0.8rem ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 96px;
+    justify-content: center;
+    align-content: center;
+    overflow-x: hidden;
+  }
+  
+  .grid-main {
+    display: grid;
+    grid-gap: 96px;
+  }
+  
+  .grid-ingredient {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 2rem;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "garnier pantene dove clinique";
+    text-align: center;
+  }
+  
+  .garnier { grid-area: garnier; }
+  
+  .pantene { grid-area: pantene; }
+  
+  .dove { grid-area: dove; }
+  
+  .clinique { grid-area: clinique; }
+  
+  @media (max-width: 788px) {
+    .grid-container {
+      grid-gap: 36px;
+    }
+    
+    .grid-ingredient {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.5rem 1.5rem;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "garnier pantene"
+        "dove clinique";
+    }
+    
+    .garnier { grid-area: garnier; }
+    
+    .pantene { grid-area: pantene; }
+    
+    .dove { grid-area: dove; }
+    
+    .clinique { grid-area: clinique; }
+  }
+  
+  .grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "brand company community legal social";
+  }
+  
+  .brand { grid-area: brand; }
+  
+  .company { grid-area: company; }
+  
+  .community { grid-area: community; }
+  
+  .legal { grid-area: legal; }
+  
+  .social { grid-area: social; }
+  
