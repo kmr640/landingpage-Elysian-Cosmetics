@@ -15,8 +15,6 @@ Developed from scratch
 
 ## Showcase
 ![desktop](https://github.com/kmr640/landingpage-Elysian-Cosmetics/blob/main/img/elysian-desktop.jpeg)
-![mobile](https://github.com/kmr640/landingpage-Elysian-Cosmetics/blob/main/img/elysian-mobile.jpeg)
-
 
 ## How to install
  - Clone res
